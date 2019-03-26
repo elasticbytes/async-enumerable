@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>7.2</LangVersion>
+    <DefineConstants>$(DefineConstants);CORERT;CRUTCH</DefineConstants>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>$(Configuration.Equals('Release'))</GeneratePackageOnBuild>
+    <NuspecFile>ElasticBytes.AsyncEnumerable.nuspec</NuspecFile>
+    <AssemblyOriginatorKeyFile>snk.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Company>Elastic Bytes</Company>
+    <Copyright>&#xa9; 2019 Elastic Bytes</Copyright>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" />
+  </ItemGroup>
+</Project>
