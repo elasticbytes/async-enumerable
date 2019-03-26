@@ -35,7 +35,7 @@ namespace System.Runtime.CompilerServices
             default; // coreclr's AsyncTaskMethodBuilder.Create just returns default as well
 #endif
 
-        /// <summary>Invokes <see cref="IAsyncStateMachine.MoveNext"/> on the state machine while guarding the <see cref="ExecutionContext."/></summary>
+        /// <summary>Invokes <see cref="IAsyncStateMachine.MoveNext"/> on the state machine while guarding the <see cref="ExecutionContext"/>.</summary>
         /// <typeparam name="TStateMachine">The type of the state machine.</typeparam>
         /// <param name="stateMachine">The state machine instance, passed by reference.</param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -69,8 +69,8 @@ namespace System.Runtime.CompilerServices
         /// <summary>Marks iteration as being completed, whether successfully or otherwise.</summary>
         public void Complete() => _methodBuilder.SetResult();
 
-        /// <summary>Gets an object that may be used to uniquely identify this builder to the debugger.</summary>
 #if !CRUTCH
+        /// <summary>Gets an object that may be used to uniquely identify this builder to the debugger.</summary>
         internal object ObjectIdForDebugger => _methodBuilder.ObjectIdForDebugger;
 #endif
     }
