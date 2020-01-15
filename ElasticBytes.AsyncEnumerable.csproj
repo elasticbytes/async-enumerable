@@ -1,10 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>netstandard2.0;netcoreapp3.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>7.2</LangVersion>
-    <DefineConstants>$(DefineConstants);CORERT;CRUTCH</DefineConstants>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -19,19 +18,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)'!='netstandard2.0'">
-    <Compile Include="src\TypeForwarders.cs" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
-    <Compile Include="src\AsyncIteratorMethodBuilder.cs" />
-    <Compile Include="src\ConfiguredCancelableAsyncEnumerable.cs" />
-    <Compile Include="src\EnumeratorCancellationAttribute.cs" />
-    <Compile Include="src\IAsyncDisposable.cs" />
-    <Compile Include="src\IAsyncEnumerable.cs" />
-    <Compile Include="src\IAsyncEnumerator.cs" />
-    <Compile Include="src\ManualResetValueTaskSourceCore.cs" />
-    <Compile Include="src\TaskAsyncEnumerableExtensions.cs" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\AsyncEnumeratorAdapter.cs" />
