@@ -26,6 +26,7 @@
   <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
     <Compile Include="src\AsyncIteratorMethodBuilder.cs" />
     <Compile Include="src\ConfiguredCancelableAsyncEnumerable.cs" />
+    <Compile Include="src\EnumeratorCancellationAttribute.cs" />
     <Compile Include="src\IAsyncDisposable.cs" />
     <Compile Include="src\IAsyncEnumerable.cs" />
     <Compile Include="src\IAsyncEnumerator.cs" />
