@@ -198,7 +198,7 @@ namespace System.Collections.Generic
     /// <summary>
     /// Provides an empty <see cref="IAsyncEnumerator{T}"/>.
     /// </summary>
-    public static class AsyncEnumerator<T> //: IAsyncEnumerator<T>
+    public static class AsyncEnumerator<T>
     {
         sealed class EmptyAsyncEnumerator : IAsyncEnumerator<T>
         {

@@ -10,7 +10,7 @@ namespace System.Threading.Tasks
 {
     /// <summary>Provides a set of static methods for working with specific kinds of <see cref="Task"/> instances.</summary>
     [ComponentModel.EditorBrowsable(ComponentModel.EditorBrowsableState.Never)]
-    public static class AsyncEnumerableTaskExtensions
+    public static class TaskAsyncEnumerableExtensions
     {
         /// <summary>Configures how awaits on the tasks returned from an async iteration will be performed.</summary>
         /// <typeparam name="T">The type of the objects being iterated.</typeparam>

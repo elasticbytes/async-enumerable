@@ -20,6 +20,9 @@
   <ItemGroup>
     <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.2" />
   </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'!='netstandard2.0'">
+    <Compile Include="src\TypeForwarders.cs" />
+  </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
     <Compile Include="src\AsyncIteratorMethodBuilder.cs" />
     <Compile Include="src\ConfiguredCancelableAsyncEnumerable.cs" />
@@ -27,7 +30,7 @@
     <Compile Include="src\IAsyncEnumerable.cs" />
     <Compile Include="src\IAsyncEnumerator.cs" />
     <Compile Include="src\ManualResetValueTaskSourceCore.cs" />
-    <Compile Include="src\TaskExtensions.cs" />
+    <Compile Include="src\TaskAsyncEnumerableExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\AsyncEnumeratorAdapter.cs" />
