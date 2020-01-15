@@ -3,7 +3,7 @@
   <metadata>
     <id>ElasticBytes.AsyncEnumerable</id>
     <title>ElasticBytes.AsyncEnumerable</title>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <authors>Anton Tykhyy</authors>
     <copyright>&#xa9; 2019 Elastic Bytes</copyright>
     <description>Helper package to make C# 8 IAsyncEnumerable compile and run on .NET Standard 2.0, .NET Core 2 and .NET Framework</description>
