@@ -3,15 +3,18 @@
   <metadata>
     <id>ElasticBytes.AsyncEnumerable</id>
     <title>ElasticBytes.AsyncEnumerable</title>
-    <version>1.3.0</version>
+    <version>$version$</version>
     <authors>Anton Tykhyy</authors>
     <copyright>&#xa9; 2019 Elastic Bytes</copyright>
     <description>Helper package to make C# 8 IAsyncEnumerable compile and run on .NET Standard 2.0, .NET Core 2 and .NET Framework</description>
     <projectUrl>https://github.com/elasticbytes/async-enumerable</projectUrl>
     <license type="expression">MIT</license>
+    <repository type="git" url="https://github.com/elasticbytes/async-enumerable" branch="$branch$" commit="$commit$" />
     <dependencies>
-      <dependency id="System.Threading.Tasks.Extensions" version="4.5.2" />
-      <dependency id="Microsoft.Bcl.AsyncInterfaces" version="1.1.0" />
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.Threading.Tasks.Extensions" version="4.5.2" />
+        <dependency id="Microsoft.Bcl.AsyncInterfaces" version="1.1.0" />
+      </group>
     </dependencies>
   </metadata>
   <files>
